@@ -15,20 +15,19 @@ module unid_control(
     output reg div_mul_wr,
     output reg div_mul_to_reg,
 
-    output reg [1:0] i_or_d,
-    output reg [2:0] mem_to_reg,
-    output reg [1:0] pc_src,
+    output reg [1:0] i_or_d,    // mux
+    output reg [2:0] mem_to_reg,    // mux
+    output reg [1:0] pc_src,     // mux
     output reg [2:0] alu_op,
-    output reg [1:0] alu_src_a,
-    output reg [1:0] alu_src_b,
-    output reg [1:0] reg_dst,
-    output reg [1:0] divmul_sh_bankreg,
-    output reg [1:0] sh_reg_op
+    output reg [1:0] alu_src_a,   // mux
+    output reg [1:0] alu_src_b,   // mux
+    output reg [1:0] reg_dst,    // mux
+    output reg [1:0] divmul_sh_reg,  // mux
+    output reg [2:0] sh_op   
 
 );
 
     reg [4:0] STATE;
-    reg [2:0] COUNTER;
 
     parameter A_MEM_READ = 5'b00000;
     parameter B_MEM_READ = 5'b00001;
@@ -55,7 +54,119 @@ module unid_control(
     parameter WRITE_BACK_7 = 5'b10110;
     parameter MEM_READ_END_BACK = 5'b10111;
     parameter MEM_WRITE_2 = 5'b11000;
-    parameter READ_INST_PC_INC = 5'b11001;
+    parameter FETCH = 5'b11001;
     parameter BRANCH_END = 5'b11010;
+
+initial begin
+    pc_write_cond = 1'b0;
+    pc_write = 1'b0;
+    mem_read = 1'b0;
+    mem_write = 1'b0;
+    byte_or_word = 1'b0;
+    ir_write = 1'b0;
+    reg_write = 1'b0;
+    ab_from_memory = 1'b0;
+    div_mul_wr = 1'b0;
+    div_mul_to_reg = 1'b0;
+    alu_op = 3'b000;
+    sh_op = 3'b000;
+    STATE = FETCH;
+end
+
+always @(posedge clk) begin
+    if (reset == 1) begin
+        STATE = RESET;
+        pc_write_cond = 1'b0;
+        pc_write = 1'b0;
+        mem_read = 1'b0;
+        mem_write = 1'b0;
+        byte_or_word = 1'b0;
+        ir_write = 1'b0;
+        reg_write = 1'b0;
+        ab_from_memory = 1'b0;
+        div_mul_wr = 1'b0;
+        div_mul_to_reg = 1'b0;
+        alu_op = 3'b000;
+        sh_op = 3'b000;
+        i_or_d = 2'b00;
+        mem_to_reg = 3'b000;
+        pc_src = 2'b00;
+        alu_src_a = 2'b00;
+        alu_src_b = 2'b00;
+        reg_dst = 2'b00;
+        divmul_sh_reg = 2'b00;
+    end
+    else begin
+        case (STATE)
+            RESET: begin
+                STATE = RESET;
+                pc_write_cond = 1'b0;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            FETCH: begin
+                STATE = BRANCH_END;
+                pc_write_cond = 1'b0;
+                pc_write = 1'b1;
+                mem_read = 1'b1;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b1;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b01;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            BRANCH_END: begin
+                STATE = RESET;
+                pc_write_cond = 1'b0;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b11;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+    end
+end
 
 endmodule
