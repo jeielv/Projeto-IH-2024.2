@@ -6,6 +6,6 @@ module mux_3_5b(
     output wire [4:0] out
 );
 
-    assign out = (selector[1] ? (selector[0] ? 32{1'b0} : in_2) : (selector[0] ? in_1 : in_0));
+    assign out = (selector[1] ? (selector[0] ? 5{1'b0} : in_2) : (selector[0] ? in_1 : in_0));
 
 endmodule
