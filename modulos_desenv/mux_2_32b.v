@@ -1,4 +1,4 @@
-module mux_2(
+module mux_2_32b(
     input wire seletor
     input wire [31:0] in_0
     input wire [31:0] in_1
