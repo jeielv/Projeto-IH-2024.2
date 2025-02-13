@@ -7,6 +7,6 @@ module mux_4(
     output wire [31:0] out
 );
 
-    assign out = (selector[1] ? (selector[0] ? in_3 : in_2) : (selector[0] ? in_1 : in_0))
+    assign out = (selector[1] ? (selector[0] ? in_3 : in_2) : (selector[0] ? in_1 : in_0));
 
 endmodule
