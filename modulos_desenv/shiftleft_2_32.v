@@ -1,4 +1,4 @@
-module shiftleft_2 (
+module shiftleft_2_32 (
     input  wire [31:0] in,
     output wire [31:0] out,
 );
