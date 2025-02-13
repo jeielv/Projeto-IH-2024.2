@@ -1,4 +1,4 @@
-module mux_mem_addr(
+module mux_4(
     input wire [1:0] seletor
     input wire [31:0] in_0     // PC
     input wire [31:0] in_1     // A
