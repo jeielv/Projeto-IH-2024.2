@@ -4,7 +4,8 @@ module unid_control(
     input wire [5:0] opcode,
     input wire [5:0] funct,
 
-    output reg pc_write_cond,
+    input wire eq,    // flag que sai da alu dizendo se A = B
+
     output reg pc_write,
     output reg mem_read,
     output reg mem_write,
@@ -68,7 +69,6 @@ module unid_control(
     parameter DECODE = 5'b11011
 
 initial begin
-    pc_write_cond = 1'b0;
     pc_write = 1'b0;
     mem_read = 1'b0;
     mem_write = 1'b0;
@@ -87,7 +87,6 @@ always @(posedge clk) begin
     if (reset == 1) begin
         STATE = RESET;
         INST_ID = 3'b000;
-        pc_write_cond = 1'b0;
         pc_write = 1'b0;
         mem_read = 1'b0;
         mem_write = 1'b0;
@@ -112,7 +111,6 @@ always @(posedge clk) begin
             RESET: begin
                 STATE = RESET;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -136,7 +134,6 @@ always @(posedge clk) begin
             FETCH: begin
                 STATE = BRANCH_END;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b1;
                 mem_read = 1'b1;
                 mem_write = 1'b0;
@@ -160,7 +157,6 @@ always @(posedge clk) begin
             BRANCH_END: begin
                 STATE = DECODE;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -289,7 +285,6 @@ always @(posedge clk) begin
             A_MEM_READ: begin 
                 STATE = B_MEM_READ;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b1;
                 mem_write = 1'b0;
@@ -313,7 +308,6 @@ always @(posedge clk) begin
             B_MEM_READ: begin 
                 STATE = DIVM;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b1;
                 mem_write = 1'b0;
@@ -337,7 +331,6 @@ always @(posedge clk) begin
             DIVM: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -361,7 +354,6 @@ always @(posedge clk) begin
             ALU_OP_1: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -385,7 +377,6 @@ always @(posedge clk) begin
             DESLOC_CALC: begin 
                 STATE = WRITE_BACK_1;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -416,7 +407,6 @@ always @(posedge clk) begin
             WRITE_BACK_1: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -440,7 +430,6 @@ always @(posedge clk) begin
             ALU_OP_2: begin 
                 STATE = WRITE_BACK_2;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -477,7 +466,6 @@ always @(posedge clk) begin
             WRITE_BACK_2: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -501,7 +489,6 @@ always @(posedge clk) begin
             JUMP_REG: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b1;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -525,7 +512,6 @@ always @(posedge clk) begin
             DIV_MUL_REG_WRITE: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -556,7 +542,6 @@ always @(posedge clk) begin
             WRITE_BACK_3: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -586,7 +571,6 @@ always @(posedge clk) begin
             JUMP: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b1;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -610,7 +594,6 @@ always @(posedge clk) begin
             JUMP_WRITE: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b1;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -634,7 +617,6 @@ always @(posedge clk) begin
             ALU_OP_3: begin 
                 STATE = WRITE_BACK_4;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -658,7 +640,6 @@ always @(posedge clk) begin
             WRITE_BACK_4: begin 
                 STATE = FETCH;
                 INST_ID = 3'b000;
-                pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
                 mem_write = 1'b0;
@@ -680,7 +661,75 @@ always @(posedge clk) begin
             end
 
             ALU_OP_4: begin 
-                
+                STATE = FETCH;
+                INST_ID = 3'b000;
+                pc_write = eq ? (opcode[0]? 1'b0 : 1'b1) : (opcode[0]? 1'b1 : 1'b0);  // se A = B e eh bne, nao escreve pc; se A = B e eh beq, escreve pc
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b1;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b010;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b101;
+                pc_src = 2'b01;
+                alu_src_a = 2'b01;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+            
+            END_CALC: begin
+                if (INST_ID == ADDM) begin 
+                    STATE = MEM_READ;
+                    INST_ID = ADDM;
+                end
+                else begin 
+                    if (INST_ID == LW) begin 
+                        STATE = MEM_READ;
+                        INST_ID = LW;
+                    end
+                    else begin 
+                        if (INST_ID == SW) begin 
+                            STATE =  MEM_WRITE_1;
+                            INST_ID = SW;
+                        end
+                        else begin 
+                            if (INST_ID == LB) begin 
+                                STATE = MEM_READ;
+                                INST_ID = LB;
+                            end
+                            else begin 
+                                if (INST_ID == SB) begin 
+                                    STATE = MEM_READ_END_BACK;
+                                    INST_ID = SB;
+                                end
+                            end
+                        end
+                    end
+                end
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b001;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b01;
+                alu_src_b = 2'b10;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
             end
 
         endcase    
