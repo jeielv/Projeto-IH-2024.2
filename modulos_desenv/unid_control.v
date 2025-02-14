@@ -67,6 +67,7 @@ module unid_control(
     parameter FETCH = 5'b11001;
     parameter BRANCH_END = 5'b11010;
     parameter DECODE = 5'b11011;
+    parameter RESET = 5'b11100;
     parameter WRITE_BACK_8 = 5'b11111;
 
 initial begin
@@ -110,7 +111,7 @@ always @(posedge clk) begin
     else begin
         case (STATE)
             RESET: begin
-                STATE = RESET;
+                STATE = FETCH;
                 INST_ID = 3'b000;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
@@ -565,7 +566,7 @@ always @(posedge clk) begin
                     divmul_sh_reg = 2'b00;
                 end
                 else begin
-                    div_mul_to_reg = 2'b01
+                    div_mul_to_reg = 2'b01;
                 end
             end
 
