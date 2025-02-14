@@ -56,6 +56,7 @@ module unid_control(
     parameter MEM_WRITE_2 = 5'b11000;
     parameter FETCH = 5'b11001;
     parameter BRANCH_END = 5'b11010;
+    parameter DECODE = 5'b11011
 
 initial begin
     pc_write_cond = 1'b0;
@@ -145,7 +146,7 @@ always @(posedge clk) begin
             end
 
             BRANCH_END: begin
-                STATE = RESET;
+                STATE = DECODE;
                 pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
@@ -165,6 +166,47 @@ always @(posedge clk) begin
                 alu_src_b = 2'b11;
                 reg_dst = 2'b00;
                 divmul_sh_reg = 2'b00;
+            end
+
+            DECODE: begin
+                if(opcode == 6'b000000) begin
+                    if(funct == 6'b100000 || funct == 6'b100100 || funct == 6'b100010) begin
+                        STATE = ALU_OP_2;
+                    end
+                    else begin
+                        if(funct == 6'b000000 || funct == 6'b000011) begin
+                            STATE = DESLOC_CALC;
+                        end
+                        else begin
+                            if(funct == 6'b000101) begin
+                                STATE = A_MEM_READ;
+                            end
+                            else begin
+                                if (funct == 6'b101010) begin
+                                    STATE = ALU_OP_1;
+                                end
+                                else begin
+                                    if(funct == 6'b001000) begin
+                                        STATE = JUMP_REG;
+                                    end
+                                    else begin
+                                        if (funct == 6'b011010 || funct == 6'b011000) begin
+                                            STATE = DIV_MUL_REG_WRITE;
+                                        end
+                                        else begin
+                                            if(funct == 6'b01000 || funct == 6'b010010) begin
+                                                STATE = WRITE_BACK_3;
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                else begin
+                    if ()
+                end
             end
     end
 end
