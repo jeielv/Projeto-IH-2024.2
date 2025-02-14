@@ -1,8 +1,8 @@
 module mux_3_32b(
-    input wire [1:0] seletor
-    input wire [31:0] in_0
-    input wire [31:0] in_1
-    input wire [31:0] in_2
+    input wire [1:0] seletor,
+    input wire [31:0] in_0,
+    input wire [31:0] in_1,
+    input wire [31:0] in_2,
     output wire [31:0] out
 );
 
