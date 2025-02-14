@@ -1,6 +1,6 @@
 module div(
-    input wire [31:0] data_A
-    input wire [31:0] data_B
+    input wire [31:0] data_A,
+    input wire [31:0] data_B,
     output wire [63:0] out
 );
     wire [31:0] div;
