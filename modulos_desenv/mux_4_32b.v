@@ -1,9 +1,9 @@
 module mux_4_32b(
-    input wire [1:0] seletor
-    input wire [31:0] in_0     // PC
-    input wire [31:0] in_1     // A
-    input wire [31:0] in_2     // B
-    input wire [31:0] in_3     // ALU_Out
+    input wire [1:0] seletor,
+    input wire [31:0] in_0 ,    // PC
+    input wire [31:0] in_1 ,    // A
+    input wire [31:0] in_2 ,    // B
+    input wire [31:0] in_3  ,   // ALU_Out
     output wire [31:0] out
 );
 
