@@ -28,7 +28,16 @@ module unid_control(
 );
 
     reg [4:0] STATE;
+    reg [2:0] INST_ID;
 
+    //para INST_ID
+    parameter LW = 3'b001;
+    parameter SW = 3'b010;
+    parameter LB = 3'b011;
+    parameter SB = 3'b100;
+    parameter ADDM = 3'b101;
+
+    //para STATE
     parameter A_MEM_READ = 5'b00000;
     parameter B_MEM_READ = 5'b00001;
     parameter DIVM = 5'b00010;
@@ -77,6 +86,7 @@ end
 always @(posedge clk) begin
     if (reset == 1) begin
         STATE = RESET;
+        INST_ID = 3'b000;
         pc_write_cond = 1'b0;
         pc_write = 1'b0;
         mem_read = 1'b0;
@@ -101,6 +111,7 @@ always @(posedge clk) begin
         case (STATE)
             RESET: begin
                 STATE = RESET;
+                INST_ID = 3'b000;
                 pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
@@ -124,6 +135,7 @@ always @(posedge clk) begin
 
             FETCH: begin
                 STATE = BRANCH_END;
+                INST_ID = 3'b000;
                 pc_write_cond = 1'b0;
                 pc_write = 1'b1;
                 mem_read = 1'b1;
@@ -147,6 +159,7 @@ always @(posedge clk) begin
 
             BRANCH_END: begin
                 STATE = DECODE;
+                INST_ID = 3'b000;
                 pc_write_cond = 1'b0;
                 pc_write = 1'b0;
                 mem_read = 1'b0;
@@ -172,30 +185,37 @@ always @(posedge clk) begin
                 if(opcode == 6'b000000) begin
                     if(funct == 6'b100000 || funct == 6'b100100 || funct == 6'b100010) begin
                         STATE = ALU_OP_2;
+                        INST_ID = 3'b000;
                     end
                     else begin
                         if(funct == 6'b000000 || funct == 6'b000011) begin
                             STATE = DESLOC_CALC;
+                            INST_ID = 3'b000;
                         end
                         else begin
                             if(funct == 6'b000101) begin
                                 STATE = A_MEM_READ;
+                                INST_ID = 3'b000;
                             end
                             else begin
                                 if (funct == 6'b101010) begin
                                     STATE = ALU_OP_1;
+                                    INST_ID = 3'b000;
                                 end
                                 else begin
                                     if(funct == 6'b001000) begin
                                         STATE = JUMP_REG;
+                                        INST_ID = 3'b000;
                                     end
                                     else begin
                                         if (funct == 6'b011010 || funct == 6'b011000) begin
                                             STATE = DIV_MUL_REG_WRITE;
+                                            INST_ID = 3'b000;
                                         end
                                         else begin
                                             if(funct == 6'b01000 || funct == 6'b010010) begin
                                                 STATE = WRITE_BACK_3;
+                                                INST_ID = 3'b000;
                                             end
                                         end
                                     end
@@ -205,8 +225,113 @@ always @(posedge clk) begin
                     end
                 end
                 else begin
-                    if ()
+                    if (opcode == 6'b000010) begin
+                        STATE = JUMP;
+                        INST_ID = 3'b000;
+                    end
+                    else begin 
+                        if (opcode == 6'b000011) begin 
+                            STATE = JUMP_REG;
+                            INST_ID = 3'b000;
+                        end
+                        else begin 
+                            if (opcode == 6'b001000) begin 
+                                STATE = ALU_OP_3;
+                                INST_ID = 3'b000;
+                            end
+                            else begin 
+                                if(opcode == 6'b000100 || opcode == 6'b000101) begin 
+                                    STATE = ALU_OP_4;
+                                    INST_ID = 3'b000;
+                                end
+                                else begin 
+                                    if (opcode == 6'b000001) begin 
+                                        STATE = END_CALC;
+                                        INST_ID = ADDM;
+                                    end
+                                    else begin 
+                                        if (opcode == 6'b001111) begin 
+                                            STATE = WRITE_BACK_5;
+                                            INST_ID = 3'b000;
+                                        end
+                                        else begin 
+                                            if (opcode == 6'b100011) begin
+                                                STATE = END_CALC;
+                                                INST_ID = LW;
+                                            end
+                                            else begin 
+                                                if (opcode == 6'b101011) begin 
+                                                    STATE = END_CALC;
+                                                    INST_ID = SW;
+                                                end
+                                                else begin 
+                                                    if (opcode == 6'b100000) begin 
+                                                        STATE = END_CALC;
+                                                        INST_ID = LB;
+                                                    end
+                                                    else begin 
+                                                        if (opcode == 6'b101000) begin 
+                                                            STATE = END_CALC;
+                                                            INST_ID = SB;
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
                 end
+            end
+
+            A_MEM_READ: begin 
+                STATE = RESET;
+                INST_ID = 3'b000;
+                pc_write_cond = 1'b0;
+                pc_write = 1'b0;
+                mem_read = 1'b1;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b01;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            B_MEM_READ: begin 
+                STATE = RESET;
+                INST_ID = 3'b000;
+                pc_write_cond = 1'b0;
+                pc_write = 1'b0;
+                mem_read = 1'b1;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b10;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
             end
     end
 end
