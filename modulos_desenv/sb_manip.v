@@ -1,6 +1,6 @@
 module sb_manip(
-    input wire [31:0] mem_byte
-    input wire [31:0] b_byte
+    input wire [31:0] mem_byte,
+    input wire [31:0] b_byte,
     output wire [31:0] out
 );
 
