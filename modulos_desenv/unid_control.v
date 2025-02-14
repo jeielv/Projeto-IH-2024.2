@@ -66,7 +66,8 @@ module unid_control(
     parameter MEM_WRITE_2 = 5'b11000;
     parameter FETCH = 5'b11001;
     parameter BRANCH_END = 5'b11010;
-    parameter DECODE = 5'b11011
+    parameter DECODE = 5'b11011;
+    parameter WRITE_BACK_8 = 5'b11111;
 
 initial begin
     pc_write = 1'b0;
@@ -728,6 +729,227 @@ always @(posedge clk) begin
                 pc_src = 2'b00;
                 alu_src_a = 2'b01;
                 alu_src_b = 2'b10;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            MEM_READ: begin 
+                if (INST_ID == ADDM) begin 
+                    STATE = ALU_OP_5;
+                    INST_ID = ADDM;
+                end
+                else begin 
+                    if (INST_ID == LW) begin 
+                        STATE = WRITE_BACK_6;
+                        INST_ID = LW;
+                    end
+                    else begin 
+                        if (INST_ID == LB) begin 
+                            STATE = WRITE_BACK_7;
+                            INST_ID = LB;
+                        end
+                    end
+                end
+                pc_write = 1'b0;
+                mem_read = 1'b1;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b11;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            ALU_OP_5: begin 
+                STATE = WRITE_BACK_3;
+                INST_ID = ADDM;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b001;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b10;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            WRITE_BACK_8: begin 
+                STATE = FETCH;
+                INST_ID = ADDM;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b1;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b101;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            WRITE_BACK_5: begin 
+                STATE = FETCH;
+                INST_ID = 3'b000;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b1;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b110;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            WRITE_BACK_6: begin 
+                STATE = FETCH;
+                INST_ID = LW;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b1;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b010;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            MEM_WRITE_1: begin 
+                STATE = FETCH;
+                INST_ID = SW;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b1;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b11;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            WRITE_BACK_7: begin 
+                STATE = FETCH;
+                INST_ID = LB;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b1;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b00;
+                mem_to_reg = 3'b100;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            MEM_READ_END_BACK: begin 
+                STATE = MEM_WRITE_2;
+                INST_ID = SB;
+                pc_write = 1'b0;
+                mem_read = 1'b1;
+                mem_write = 1'b0;
+                byte_or_word = 1'b0;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b001;
+                sh_op = 3'b000;
+                i_or_d = 2'b11;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b01;
+                alu_src_b = 2'b10;
+                reg_dst = 2'b00;
+                divmul_sh_reg = 2'b00;
+            end
+
+            MEM_WRITE_2: begin 
+                STATE = FETCH;
+                INST_ID = SB;
+                pc_write = 1'b0;
+                mem_read = 1'b0;
+                mem_write = 1'b1;
+                byte_or_word = 1'b1;
+                ir_write = 1'b0;
+                reg_write = 1'b0;
+                ab_from_memory = 1'b0;
+                div_mul_wr = 1'b0;
+                div_mul_to_reg = 1'b0;
+                alu_op = 3'b000;
+                sh_op = 3'b000;
+                i_or_d = 2'b11;
+                mem_to_reg = 3'b000;
+                pc_src = 2'b00;
+                alu_src_a = 2'b00;
+                alu_src_b = 2'b00;
                 reg_dst = 2'b00;
                 divmul_sh_reg = 2'b00;
             end
