@@ -14,7 +14,7 @@ module unid_control(
     output reg reg_write,
     output reg ab_from_memory,
     output reg div_mul_wr,
-    output reg div_mul_to_reg,
+    output reg div_or_mul,
 
     output reg [1:0] i_or_d,    // mux
     output reg [2:0] mem_to_reg,    // mux
@@ -79,7 +79,7 @@ initial begin
     reg_write = 1'b0;
     ab_from_memory = 1'b0;
     div_mul_wr = 1'b0;
-    div_mul_to_reg = 1'b0;
+    div_or_mul = 1'b0;
     alu_op = 3'b000;
     sh_op = 3'b000;
     STATE = FETCH;
@@ -97,7 +97,7 @@ always @(posedge clk) begin
         reg_write = 1'b0;
         ab_from_memory = 1'b0;
         div_mul_wr = 1'b0;
-        div_mul_to_reg = 1'b0;
+        div_or_mul = 1'b0;
         alu_op = 3'b000;
         sh_op = 3'b000;
         i_or_d = 2'b00;
@@ -121,7 +121,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -144,7 +144,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -167,7 +167,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -295,7 +295,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b01;
@@ -318,7 +318,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b10;
@@ -341,7 +341,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b1;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b010;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -364,7 +364,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b010;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -387,7 +387,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
 
                 if(funct == 6'b000000) begin
@@ -417,7 +417,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -440,7 +440,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
 
                 if (funct == 6'b100000) begin
                     alu_op = 3'b000;
@@ -476,7 +476,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -499,7 +499,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -524,10 +524,10 @@ always @(posedge clk) begin
                 div_mul_wr = 1'b1;
 
                 if(funct == 6'b011010) begin
-                    div_mul_to_reg = 1'b0;
+                    div_or_mul = 1'b0;
                 end
                 else begin 
-                    div_mul_to_reg = 1'b1;
+                    div_or_mul = 1'b1;
                 end
 
                 alu_op = 3'b000;
@@ -552,7 +552,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -566,7 +566,7 @@ always @(posedge clk) begin
                     divmul_sh_reg = 2'b00;
                 end
                 else begin
-                    div_mul_to_reg = 2'b01;
+                    divmul_sh_reg = 2'b01;
                 end
             end
 
@@ -581,7 +581,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -604,7 +604,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -627,7 +627,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -650,7 +650,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -673,7 +673,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b010;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -722,7 +722,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -759,7 +759,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b11;
@@ -782,7 +782,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -805,7 +805,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -828,7 +828,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -851,7 +851,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -874,7 +874,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b11;
@@ -897,7 +897,7 @@ always @(posedge clk) begin
                 reg_write = 1'b1;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b00;
@@ -920,7 +920,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b001;
                 sh_op = 3'b000;
                 i_or_d = 2'b11;
@@ -943,7 +943,7 @@ always @(posedge clk) begin
                 reg_write = 1'b0;
                 ab_from_memory = 1'b0;
                 div_mul_wr = 1'b0;
-                div_mul_to_reg = 1'b0;
+                div_or_mul = 1'b0;
                 alu_op = 3'b000;
                 sh_op = 3'b000;
                 i_or_d = 2'b11;
