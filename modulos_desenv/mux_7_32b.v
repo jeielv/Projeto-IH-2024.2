@@ -1,12 +1,12 @@
 module mux_7_32b(
-    input wire [2:0] seletor
-    input wire [31:0] in_0
-    input wire [31:0] in_1
-    input wire [31:0] in_2
-    input wire [31:0] in_3
-    input wire [31:0] in_4
-    input wire [31:0] in_5 
-    input wire [31:0] in_6 
+    input wire [2:0] seletor,
+    input wire [31:0] in_0,
+    input wire [31:0] in_1,
+    input wire [31:0] in_2,
+    input wire [31:0] in_3,
+    input wire [31:0] in_4,
+    input wire [31:0] in_5 ,
+    input wire [31:0] in_6 ,
     output wire [31:0] out
 );
 
