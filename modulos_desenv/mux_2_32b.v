@@ -5,6 +5,6 @@ module mux_2_32b(
     output wire [31:0] out
 );
 
-    assign out = (selector ? in_1 : in_0);
+    assign out = (seletor ? in_1 : in_0);
 
 endmodule
