@@ -1,0 +1,175 @@
+/home/vinicius/Documentos/Programacao/verilog/projeto/unid_control.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/unid_control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module unid_control
+
+Top level modules:
+	unid_control
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/Instr_Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg
+-- Compiling architecture behavioral_arch of Instr_Reg
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/sb_manip.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/sb_manip.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sb_manip
+
+Top level modules:
+	sb_manip
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_2_32b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_2_32b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_2_32b
+
+Top level modules:
+	mux_2_32b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_3_32b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_3_32b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_3_32b
+
+Top level modules:
+	mux_3_32b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_3_5b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_3_5b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_3_5b
+
+Top level modules:
+	mux_3_5b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mult.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mult.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mult
+
+Top level modules:
+	mult
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/ula32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Ula32
+-- Compiling architecture behavioral of Ula32
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_4_32b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_4_32b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_4_32b
+
+Top level modules:
+	mux_4_32b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/div.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/div.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module div
+
+Top level modules:
+	div
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/RegDesloc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegDesloc
+-- Compiling architecture behavioral_arch of RegDesloc
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/Banco_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Banco_reg
+-- Compiling architecture behavioral_arch of Banco_reg
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/cpu_todo.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/cpu_todo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cpu_todo
+
+Top level modules:
+	cpu_todo
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/shiftleft_2_in32.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/shiftleft_2_in32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftleft_2_in32
+
+Top level modules:
+	shiftleft_2_in32
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/Memoria.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling package ram_constants
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package LPM_COMPONENTS
+-- Loading package ram_constants
+-- Compiling entity Memoria
+-- Compiling architecture behavioral_arch of Memoria
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_7_32b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_7_32b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_7_32b
+
+Top level modules:
+	mux_7_32b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/mux_2_64b.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/mux_2_64b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_2_64b
+
+Top level modules:
+	mux_2_64b
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_1.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_1
+
+Top level modules:
+	sign_extend_1
+
+} {} {}} {/home/vinicius/Documentos/Programacao/verilog/Projeto IH/modulos_desenv/mult.v} {1 {vlog -work work -stats=none {/home/vinicius/Documentos/Programacao/verilog/Projeto IH/modulos_desenv/mult.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mult
+
+Top level modules:
+	mult
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/Registrador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registrador
+-- Compiling architecture behavioral_arch of Registrador
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/shiftleft_16_in16.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/shiftleft_16_in16.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftleft_16_in16
+
+Top level modules:
+	shiftleft_16_in16
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_16.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_16.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_16
+
+Top level modules:
+	sign_extend_16
+
+} {} {}} /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_8.v {1 {vlog -work work -stats=none /home/vinicius/Documentos/Programacao/verilog/projeto/sign_extend_8.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8
+
+Top level modules:
+	sign_extend_8
+
+} {} {}}
