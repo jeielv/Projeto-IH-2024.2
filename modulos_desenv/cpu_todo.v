@@ -1,4 +1,4 @@
-module cpu_tot(
+module cpu_todo(
     input wire clk,
     input wire reset
 );
@@ -6,7 +6,7 @@ module cpu_tot(
 wire one;
 assign one = 1'b1;
 
-wire pc_w;
+wire pc_write;
 wire [31:0] pc_in;
 wire [31:0] pc_out;
 
@@ -49,6 +49,8 @@ wire [31:0] B_out;
 wire [31:0] aluout_out;
 
 wire div_mul_wr;
+wire [63:0] div_result;
+wire [63:0] mult_result;
 wire [63:0] div_mul_in;
 wire [31:0] div_mul_inHI;
 wire [31:0] div_mul_outHI;
@@ -62,8 +64,13 @@ wire [31:0] sb_manip_out;
 wire [4:0] inst15_11;
 assign inst15_11 = inst15_0[15:11];
 
+wire [5:0] funct;
+assign funct = inst15_0[5:0];
+
 wire [4:0] trinta_e_um;
 assign trinta_e_um = 5'b11111;
+wire [2:0] quatro;
+assign quatro = 3'b100;
 
 wire [31:0] to_mux_to_write_data_reg;
 
@@ -71,12 +78,26 @@ wire [7:0] MDR7_0;
 assign MDR7_0 = out_MDR[7:0];
 wire[31:0] MDR_byte_extd;
 wire [31:0] lui_result;
+wire [31:0] A_to_div;
+wire [31:0] B_to_div;
 
 wire byte_or_word;
 wire [1:0] i_or_d;
 wire [1:0] reg_dst;
 wire [2:0] mem_to_reg;
 wire [1:0] divmul_sh_reg;
+wire ab_from_memory;
+wire div_or_mul;
+wire [1:0] alu_src_a;
+wire [1:0] alu_src_b;
+wire [1:0] pc_src;
+
+wire [31:0] offset_to_add;
+wire [31:0] branch_offset;
+wire [31:0] jump_addr;
+assign jump_addr = {pc_out[31:28], RS, RT, inst15_0, 2'b00};
+
+wire mem_read;
 
 Registrador PC(
     clk,
@@ -207,6 +228,20 @@ mux_2_32b mux_write_data_mem(
     write_data_mem
 );
 
+mux_2_32b mux_A_to_div(
+    ab_from_memory,
+    out_A_from_mem,
+    A_out,
+    A_to_div
+);
+
+mux_2_32b mux_B_to_div(
+    ab_from_memory,
+    mem_data,
+    B_out,
+    B_to_div
+);
+
 mux_4_32b mux_mem_addr(
     i_or_d,
     pc_out,
@@ -244,6 +279,25 @@ mux_7_32b mux_write_data_reg(
     write_data_reg
 );
 
+mux_2_64b mux_to_divmul_reg(
+    div_or_mul,
+    div_result,
+    mult_result,
+    div_mul_in
+);
+
+div calc_div(
+    A_to_div,
+    B_to_div,
+    div_result
+);
+
+mult calc_mult(
+    A_out,
+    B_out,
+    mult_result
+);
+
 sign_extend_1 slt_extd(
     slt_signal,
     slt_signal_extd
@@ -254,10 +308,71 @@ sign_extend_8 mem_byte_extd(
     MDR_byte_extd
 );
 
+sign_extend_16 extd_offset(
+    inst15_0,
+    offset_to_add
+);
+
 shiftleft_16_in16 lui(
     inst15_0,
     lui_result
 );
 
+shiftleft_2_in32 shft_to_branch(
+    offset_to_add,
+    branch_offset
+);
+
+mux_3_32b mux_op1(
+    alu_src_a,
+    pc_out,
+    A_out,
+    out_MDR,
+    op1ULA
+);
+
+mux_4_32b muxop2(
+    alu_src_b,
+    B_out,
+    quatro,
+    offset_to_add,
+    branch_offset,
+    op2ULA
+);
+
+mux_4_32b mux_pc_valor(
+    pc_src,
+    alu_result,
+    aluout_out,
+    jump_addr,
+    A_out,
+    pc_in
+);
+
+unid_control ctrl_unit(
+    clk, 
+    reset,
+    opcode,
+    funct,
+    eq,
+    pc_write,
+    mem_read,
+    mem_write,
+    byte_or_word,
+    ir_write,
+    reg_write,
+    ab_from_memory,
+    div_mul_wr,
+    div_or_mul,
+    i_or_d,
+    mem_to_reg,
+    pc_src,
+    alu_op,
+    alu_src_a,
+    alu_src_b,
+    reg_dst,
+    divmul_sh_reg,
+    sh_op
+);
 
 endmodule
