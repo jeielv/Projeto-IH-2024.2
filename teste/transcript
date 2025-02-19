@@ -1,0 +1,2001 @@
+# 0 compiles, 22 failed with no errors.
+# Compile of mux_3_5b.v was successful.
+# Compile of sb_manip.v was successful.
+# Compile of sign_extend_16.v was successful.
+# Compile of unid_control.v was successful.
+# Compile of Banco_reg.vhd was successful.
+# Compile of cpu_todo.v was successful.
+# Compile of div.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of mult.v was successful.
+# Compile of mux_2_32b.v was successful.
+# Compile of mux_2_64b.v was successful.
+# Compile of mux_3_32b.v was successful.
+# Compile of mux_4_32b.v was successful.
+# Compile of mux_7_32b.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shiftleft_2_in32.v was successful.
+# Compile of shiftleft_16_in16.v was successful.
+# Compile of sign_extend_1.v was successful.
+# Compile of sign_extend_8.v was successful.
+# Compile of ula32.vhd was successful.
+# 22 compiles, 0 failed with no errors.
+vsim -gui work.cpu_todo
+# vsim -gui work.cpu_todo 
+# Start time: 16:19:24 on Feb 19,2025
+# Loading work.cpu_todo
+# Loading work.sb_manip
+# Loading work.mux_2_32b
+# Loading work.mux_4_32b
+# Loading work.mux_3_5b
+# Loading work.mux_3_32b
+# Loading work.mux_7_32b
+# Loading work.mux_2_64b
+# Loading work.div
+# Loading work.mult
+# Loading work.sign_extend_1
+# Loading work.sign_extend_8
+# Loading work.sign_extend_16
+# Loading work.shiftleft_16_in16
+# Loading work.shiftleft_2_in32
+# Loading work.unid_control
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# Loading work.regdesloc(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+add wave -position insertpoint  \
+sim:/cpu_todo/clk
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Instr31_26
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Instr25_21
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Instr20_16
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Instr15_0
+add wave -position insertpoint  \
+sim:/cpu_todo/opcode
+add wave -position insertpoint  \
+sim:/cpu_todo/STATE
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Entrada
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+add wave -position insertpoint  \
+sim:/cpu_todo/MEM/Dataout
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+# Compile of mux_3_5b.v was successful.
+# Compile of sb_manip.v was successful.
+# Compile of sign_extend_16.v was successful.
+# Compile of unid_control.v was successful.
+# Compile of Banco_reg.vhd was successful.
+# Compile of cpu_todo.v was successful.
+# Compile of div.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of mult.v was successful.
+# Compile of mux_2_32b.v was successful.
+# Compile of mux_2_64b.v was successful.
+# Compile of mux_3_32b.v was successful.
+# Compile of mux_4_32b.v was successful.
+# Compile of mux_7_32b.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shiftleft_2_in32.v was successful.
+# Compile of shiftleft_16_in16.v was successful.
+# Compile of sign_extend_1.v was successful.
+# Compile of sign_extend_8.v was successful.
+# Compile of ula32.vhd was successful.
+# 22 compiles, 0 failed with no errors.
+quit -sim
+# End time: 16:44:17 on Feb 19,2025, Elapsed time: 0:24:53
+# Errors: 8, Warnings: 45
+vsim -gui work.cpu_todo
+# vsim -gui work.cpu_todo 
+# Start time: 16:44:29 on Feb 19,2025
+# Loading work.cpu_todo
+# Loading work.sb_manip
+# Loading work.mux_2_32b
+# Loading work.mux_4_32b
+# Loading work.mux_3_5b
+# Loading work.mux_3_32b
+# Loading work.mux_7_32b
+# Loading work.mux_2_64b
+# Loading work.div
+# Loading work.mult
+# Loading work.sign_extend_1
+# Loading work.sign_extend_8
+# Loading work.sign_extend_16
+# Loading work.shiftleft_16_in16
+# Loading work.shiftleft_2_in32
+# Loading work.unid_control
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# Loading work.regdesloc(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+add wave -position insertpoint  \
+sim:/cpu_todo/clk
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+add wave -position insertpoint  \
+sim:/cpu_todo/IR/Entrada
+add wave -position insertpoint  \
+sim:/cpu_todo/MEM/Dataout
+add wave -position insertpoint  \
+sim:/cpu_todo/MEM/Datain
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+add wave -position insertpoint  \
+sim:/cpu_todo/MEM/Wr
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+add wave -position insertpoint  \
+sim:/cpu_todo/reset
+add wave -position insertpoint  \
+sim:/cpu_todo/PC/Saida
+add wave -position insertpoint  \
+sim:/cpu_todo/PC/Entrada
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'in_3'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_7_32b.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/mux_write_data_reg File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'out'. The port definition is at: D:/Users/jvls2/Downloads/IH/sign_extend_1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/slt_extd File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 305
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (3) for port 'in_1'. The port definition is at: D:/Users/jvls2/Downloads/IH/mux_4_32b.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/muxop2 File: D:/Users/jvls2/Downloads/IH/cpu_todo.v Line: 338
+force -freeze sim:/cpu_todo/clk 1 0, 0 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regDesloc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_todo/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 1  Instance: /cpu_todo/MEM/MEM_plus_Three
+run
+run
+run
+run
+run
