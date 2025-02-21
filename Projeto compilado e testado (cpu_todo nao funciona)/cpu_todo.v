@@ -70,8 +70,8 @@ assign funct = inst15_0[5:0];
 
 wire [4:0] trinta_e_um;
 assign trinta_e_um = 5'b11111;
-wire [2:0] quatro;
-assign quatro = 3'b100;
+wire [31:0] quatro;
+assign quatro = 32'b00000000000000000000000000000100;
 
 wire [31:0] to_mux_to_write_data_reg;
 
